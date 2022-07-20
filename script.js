@@ -17,8 +17,17 @@ form.addEventListener("submit",(e)=>{
         }
     })
 
-    // Show the score
+    // Show and animate the score
     resultDiv.classList.remove("d-none")
-    resultPercentage.textContent = score + "%"
+    
+    scrollTo(0,0)
+
+    let countingScore = 0
+    const scoreCounter = setInterval(()=>{
+        resultPercentage.textContent = countingScore + "%"
+        if (countingScore === score){
+            clearInterval(scoreCounter)
+        } else {countingScore ++}
+    },10)
 })
 
