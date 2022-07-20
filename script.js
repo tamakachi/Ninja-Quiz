@@ -1,6 +1,10 @@
 const correctAnswers = ["B","B","B","B"]
 
 const form = document.querySelector(".quiz-form")
+const resultDiv = document.querySelector(".result")
+const resultPercentage = document.querySelector(".resultpercentage")
+
+// Calculate the score when user clicks submit button
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
 
@@ -12,7 +16,9 @@ form.addEventListener("submit",(e)=>{
             score += 25
         }
     })
-    console.log(score)
 
-
+    // Show the score
+    resultDiv.classList.remove("d-none")
+    resultPercentage.textContent = score + "%"
 })
+
