@@ -5,6 +5,7 @@ const resultDiv = document.querySelector(".result")
 const resultPercentage = document.querySelector(".resultpercentage")
 
 // Calculate the score when user clicks submit button
+// There are four answers, so each correct answer increases score by 25%
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
 
